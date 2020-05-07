@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <title>Authentication</title>
+    <link rel="stylesheet" href="css/auth.css" />
+    <script
+      src="https://kit.fontawesome.com/bb446db27c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="/images/logo.png" rel="icon" type="image/png" />
+    <link href="fontawesome/css/all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <section class="auth">
+      <div class="main">
+        <h2 class="logo-txt">Chatty</h2>
+        <!-- Img for logo -->
+        <!-- <img class="logo-img" src="logo.jpg" alt="logo"> -->
+        <!-- cover signin -->
+        <!-- cover signin -->
+
+        <div class="cover-details-signin cover-d" id="cover-signin">
+          <h1 class="cover-heading">Welcome Back!</h1>
+          <p class="cover-description">
+            To keep connected with us please login with your personal info
+          </p>
+          <a id="cover-signin-btn" class="cover-button auth-btn">SIGN IN</a>
+        </div>
+        <!-- cover -->
+        <!-- cover -->
+        <div class="cover"></div>
+        <!-- details -->
+        <!-- details -->
+        <div class="details" id="signup">
+          <h1 class="details-heading" id="heading">Create Account</h1>
+          <div class="details-icon">
+            <a href="#" class="details-facebook" id="FacebookLogin">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="details-google" id="GoogleLogin">
+              <i class="fa fa-google"></i>
+            </a>
+          </div>
+          <p class="details-or-email">or use your email account:</p>
+          <form
+            class="form signup"
+            id="form-details"
+            autocomplete="off"
+            aria-required="true"
+          >
+            <div class="form-div-name form-div-class" id="form-div-name">
+              <i class="far fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                min="5"
+                class="form-name"
+                autofocus
+                autocomplete="off"
+                required
+              />
+              <label for="Name" id="name_label">Name</label>
+            </div>
+            <div class="form-div email form-div-class" id="form-div-email">
+              <i class="far fa-envelope" id="emailIcon"></i>
+              <input
+                type="email"
+                class="form-email"
+                id="email"
+                autocomplete="off"
+                required
+              />
+              <label for="Email" id="email_label">Email</label>
+            </div>
+            <div
+              class="form-div password form-div-class"
+              id="form-div-password"
+            >
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="pass"
+                class="form-password"
+                autocomplete="new-password"
+                required
+              />
+              <label for="Password" id="password_label">Password</label>
+            </div>
+            <div class="form-forgot" id="forgot">
+              <a href="#" class="form-pass-forgot" id="form-pass-forgot"
+                >Forgot your password?</a
+              >
+            </div>
+
+            <a type="submit" class="form-button-submit" id="form-btn"
+              >SIGN UP</a
+            >
+            <div class="resendEmailDiv">
+              <a href="#" id="resend-btn">RESEND EMAIL</a>
+            </div>
+            <div class="authProblem"></div>
+          </form>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!-- cover sign up -->
+        <!-- cover sign up -->
+        <div class="cover-details-signup cover-d" id="cover-signup">
+          <h1 class="cover-heading">Hello, Friend!</h1>
+          <p class="cover-description">
+            Enter your personal details and start journey with us
+          </p>
+          <a id="cover-signup-btn" class="cover-button auth-btn">SIGN UP</a>
+        </div>
+        <!-- Cover reset -->
+        <!-- cover reset -->
+      </div>
+    </section>
+
+    <!-- Transition pages -->
+    <!-- For password reset -->
+    <section class="transitionPage"></section>
+    <!--  For email  verification -->
+    <section class="verifEmailPage"></section>
+    <!-- For otp verification -->
+    <section class="mobilePage"></section>
+  </body>
+
+  <script src="js/auth-style.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+  <script src="js/auth.js"></script>
+</html>
